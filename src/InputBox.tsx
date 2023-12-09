@@ -1,5 +1,5 @@
-import { Button, Input } from "@nextui-org/react";
-import { CornerDownLeft, Link2 } from "lucide-react";
+import { Input } from "@nextui-org/react";
+import { Link2 } from "lucide-react";
 
 const InputBox = () => {
   return (
