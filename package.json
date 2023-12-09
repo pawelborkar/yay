@@ -1,0 +1,36 @@
+{
+  "name": "yay",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Pawel Borkar <pawel@duck.com>",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "predoploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@nextui-org/react": "^2.2.9",
+    "@tauri-apps/api": "^1.5.1",
+    "framer-motion": "^10.16.16",
+    "jotai": "^2.6.0",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.6",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.4"
+  }
+}
