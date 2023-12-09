@@ -1,16 +1,17 @@
 // import { invoke } from "@tauri-apps/api/tauri";
-import InputBox from "./InputBox";
 import { Button } from "@nextui-org/react";
+import { useAtom } from "jotai";
 import { CornerDownLeft } from "lucide-react";
+import InputBox from "./InputBox";
+import { URLAtom } from "./states/atom";
 
 function App() {
-  // const [greetMsg, setGreetMsg] = useState("");
-  // const [name, setName] = useState("");
 
   // async function greet() {
   //   setGreetMsg(await invoke("greet", { name }));
   // }
 
+  const [URL,] = useAtom(URLAtom)
   return (
 
     <div className="w-[100vw] overflow-hidden h-[100vh] px-20 flex justify-center items-center bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg">
@@ -22,10 +23,10 @@ function App() {
       <div className="h-60 w-4/6 px-10 flex flex-col justify-evenly">
         <h2 className="text-5xl">Get rid of long messy URL</h2>
         <InputBox />
-        <div className="w-5/6">
-          < Button
-            aria-label="short url"
+        <div className="w-80">
+          <Button
             fullWidth
+            aria-label="short url"
             className='mt-4 text-white'
             color="primary"
             endContent={
@@ -33,6 +34,7 @@ function App() {
             } />
         </div>
 
+        <p>{URL}</p>
       </div>
     </div >
   );
