@@ -1,3 +1,3 @@
 import { atom } from "jotai"
 
-export const URLAtom = atom<string>('')
+export const targetURLAtom = atom<string>('')

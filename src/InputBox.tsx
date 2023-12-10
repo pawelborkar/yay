@@ -1,16 +1,16 @@
 import { Input } from "@nextui-org/react";
 import { useAtom } from "jotai";
 import { Link2 } from "lucide-react";
-import { URLAtom } from "./states/atom";
+import { targetURLAtom } from "./states/atom";
 
 const InputBox = () => {
-  const [, setURL] = useAtom(URLAtom)
+  const [, setTargetURL] = useAtom(targetURLAtom)
   return (
     <div className="flex flex-col w-[100vw]">
       <Input
         isClearable
         radius="lg"
-        onChange={e => setURL(e.target.value)}
+        onChange={e => setTargetURL(e.target.value)}
         classNames={{
           label: "text-black/50 dark:text-white/90",
           input: [
