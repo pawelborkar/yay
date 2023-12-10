@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@nextui-org/react";
 import { useAtom } from "jotai";
 import { CornerDownLeft } from "lucide-react";
-import InputBox from "./InputBox";
+import InputBox from "./components/InputBox/InputBox";
 import { targetURLAtom } from "./states/atom";
 import { shortenURLDetails } from "./interfaces";
 import { getShortenURL } from "./utils/helpers";

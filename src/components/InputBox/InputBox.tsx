@@ -1,4 +1,4 @@
-import { Input } from "@nextui-org/react";
+ mport { Input } from "@nextui-org/react";
 import { useAtom } from "jotai";
 import { Link2 } from "lucide-react";
 import { targetURLAtom } from "./states/atom";
