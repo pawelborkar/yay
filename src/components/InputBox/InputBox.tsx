@@ -1,7 +1,7 @@
- mport { Input } from "@nextui-org/react";
+import { Input } from "@nextui-org/react";
 import { useAtom } from "jotai";
 import { Link2 } from "lucide-react";
-import { targetURLAtom } from "./states/atom";
+import { targetURLAtom } from "../../states/atom";
 
 const InputBox = () => {
   const [, setTargetURL] = useAtom(targetURLAtom)
