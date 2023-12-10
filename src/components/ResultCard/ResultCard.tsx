@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Chip, Card } from "@nextui-org/react";
+import { Chip, Card, Tooltip } from "@nextui-org/react";
 import { toast } from "sonner";
 import {
   Copy,
@@ -40,7 +40,7 @@ const ResultCard = ({ url, target_url, clicks }: shortenURLDetails) => {
     >
       <div className="flex justify-between p-2">
         <div className="flex justify-center items-center">
-          <LinkSVG />
+          <LinkSVG size={22} className="ml-2" />
         </div>
         <div className="flex flex-col w-5/6">
           <div className="flex justify-between">
@@ -51,20 +51,25 @@ const ResultCard = ({ url, target_url, clicks }: shortenURLDetails) => {
               readOnly
             />
             <Copy onClick={handleCopyClick} cursor={"pointer"} size={18} />
-            <Chip
-              startContent={<MousePointerClick size={20} />}
-              variant="light"
-              className="shadow-md"
+            <Tooltip
+              className="mb-2 bg-default-200/80 cursor-pointer"
+              content={`${clicks} Clicks`}
             >
-              {clicks} clicks
-            </Chip>
+              <Chip
+                startContent={<MousePointerClick cursor="pointer" size={20} />}
+                variant="light"
+                className="shadow-md cursor-pointer "
+              >
+                {clicks} clicks
+              </Chip>
+            </Tooltip>
           </div>
           <p aria-label={target_url} className="pointer text-slate-700 text-md">
             {target_url}
           </p>
         </div>
         <div>
-          <MoreVertical />
+          <MoreVertical cursor={"pointer"} size={20} />
         </div>
       </div>
     </Card>

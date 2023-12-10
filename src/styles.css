@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scrollbar */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff08; /* Set the color of the scrollbar thumb on hover */
+}
+
+/* Set the color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #ffffff08; /* Set the color of the scrollbar thumb on hover */
+}
+
+/* Set the color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #ffffff08; /* Set the color of the scrollbar thumb on hover */
+}
+
+/* Set the corner of the scrollbar */
+::-webkit-scrollbar-corner {
+  background: #ffffff08; /* Set the color of the scrollbar thumb on hover */
+}
+ 
